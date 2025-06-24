@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <div className="logo">
             <Link to="/" className="flex items-center gap-2">
-              <img src="/logo.jpg" alt="Data Ivoire" className="navbar-logo" />
+              <img src="logo.jpg" alt="Data Ivoire" className="navbar-logo" />
             </Link>
           </div>
 
@@ -126,7 +126,7 @@ const Navbar: React.FC = () => {
               <div className="side-menu-header">
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2">
-                  <img src="/logo.jpg" alt="Data Ivoire" className="side-menu-logo" />
+                  <img src="logo.jpg" alt="Data Ivoire" className="side-menu-logo" />
                 </Link>
                 {/* Bouton de fermeture */}
                 <button className="close-button" onClick={handleMenuToggle}>

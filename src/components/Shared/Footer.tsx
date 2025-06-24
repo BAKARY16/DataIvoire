@@ -13,7 +13,7 @@ export default function FooterSection() {
         {/* Logo */}
         <div className="logo">
           <Link to="/" className="flex items-center gap-2">
-            <img src="/logo.jpg" alt="O'Artisan" className="navbar-logo" />
+            <img src="logo.jpg" alt="O'Artisan" className="navbar-logo" />
           </Link>
         </div>
 
