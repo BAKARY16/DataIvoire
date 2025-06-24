@@ -1,11 +1,12 @@
 {
-  "name": "dataivoire",
+  "name": "o-artisan",
   "version": "1.0.0",
-  "homepage": "https://gitlab.todoustudio.cloud/sbakary/dataivoire",
+  "homepage": "https://BAKARY16.github.io/DataIvoire",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
