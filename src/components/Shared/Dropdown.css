@@ -1,0 +1,219 @@
+/* Animation pour l'apparition du menu déroulant */
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0; /* Le menu est invisible */
+    transform: translateY(-30px); /* Glisse depuis plus haut */
+  }
+  to {
+    opacity: 1; /* Le menu devient visible */
+    transform: translateY(0); /* Position normale */
+  }
+}
+
+/* Animation pour la disparition du menu déroulant */
+@keyframes dropdownFadeOut {
+  from {
+    opacity: 1; /* Le menu est visible */
+    transform: translateY(0); /* Position normale */
+  }
+  to {
+    opacity: 0; /* Le menu devient invisible */
+    transform: translateY(-30px); /* Glisse vers le haut */
+  }
+}
+
+/* Styles principaux pour le menu déroulant */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: -3.2rem; /* Ajustez la position si nécessaire */
+  width: 280px; /* Réduit la largeur du menu */
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 50;
+  overflow: hidden;
+}
+
+/* Ajout de l'animation de disparition */
+.dropdown-menu.hidden {
+  animation: dropdownFadeOut 0.5s ease forwards; /* Animation de disparition */
+  pointer-events: none; /* Désactive les interactions pendant la disparition */
+}
+
+/* En-tête du menu déroulant */
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem; /* Réduit légèrement la taille de la police */
+  font-weight: bold;
+  padding: 0.8rem; /* Réduit l'espacement interne */
+  background-color: #333;
+  color: #ffffff;
+  border-bottom: 2px solid #eaeaea;
+  /*text-transform: uppercase;
+  border-radius: 8px 8px 0 0;*/
+}
+
+/* Liste des éléments dans le menu déroulant */
+.dropdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 290px; /* Réduit la hauteur maximale */
+  overflow-y: auto; /* Ajoute un défilement vertical si nécessaire */
+}
+
+/* Ajoute un style pour la barre de défilement */
+.dropdown-list::-webkit-scrollbar {
+  width: 6px; /* Réduit la largeur de la barre de défilement */
+}
+
+
+.dropdown-list::-webkit-scrollbar-thumb {
+  background-color: #ff5100;/* Couleur de la barre de défilement */
+  border-radius: 4px;
+}
+
+.dropdown-list::-webkit-scrollbar-thumb:hover {
+  background-color: #ff2200;
+}
+
+/* Styles pour chaque élément de la liste */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.8rem; /* Réduit l'espacement interne */
+  border-bottom: 1px solid #eaeaea;
+  transition: background-color 0.2s ease, transform 0.1s ease; /* Réduit l'animation */
+  cursor: pointer;
+}
+
+/* Effet au survol de l'élément */
+.dropdown-item:hover {
+  background-color: #f9f9f9;
+  transform: scale(1); /* Réduit l'effet de mise en avant */
+}
+
+/* Effet au clic sur l'élément */
+.dropdown-item:active {
+  background-color: #ff5100;
+  color: #ffffff;
+  transform: scale(0.98);
+}
+
+/* Icône ou image dans les notifications ou le panier */
+.item-icon {
+  width: 35px; /* Réduit la taille de l'icône ou de l'image */
+  height: 35px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.8rem;
+}
+
+.item-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Détails de l'élément */
+.item-details {
+  flex: 1; /* Prend tout l'espace disponible */
+  /*display: flex; /* Aligne les éléments horizontalement */
+  /*flex-direction: column; /* Aligne les éléments verticalement */
+  /*justify-content: center; /* Centre verticalement */
+}
+
+/* Nom de l'élément */
+.item-name {
+  font-size: 0.85rem; /* Réduit légèrement la taille du texte */
+  font-weight: bold; /* Texte en gras */
+  color: #333333; /* Couleur du texte */
+  /*margin-bottom: 0.2rem; Ajoute un petit espacement en bas 
+  padding-bottom: 0.9rem;*/
+}
+
+/* Quantité de l'élément */
+.item-quantity {
+  font-size: 0.8rem; /* Réduit la taille du texte */
+  color: #777777; /* Couleur grise */
+  text-align: left; /* Aligne le texte à gauche */
+  margin-top: 0.2rem; /* Ajoute un petit espacement en haut */
+}
+
+/* Temps de notification */
+.notification-time {
+  font-size: 0.75rem; /* Réduit la taille du texte */
+  color: #777777; /* Couleur grise */
+  text-align: left; /* Aligne le texte à gauche */
+  /*padding-top: 2rem;  Ajoute un espacement en haut */
+}
+
+/* Bouton pour supprimer un produit ou une notification */
+.item-remove {
+  background: none; /* Pas de fond */
+  border: none; /* Pas de bordure */
+  color: #ff5100; /* Couleur orange */
+  cursor: pointer; /* Curseur en pointeur */
+  font-size: 1rem; /* Taille de l'icône */
+  transition: color 0.3s ease; /* Animation fluide */
+}
+
+/* Effet au survol du bouton de suppression */
+.item-remove:hover {
+  color: #ff2200; /* Couleur rouge au survol */
+}
+
+/* Icône de notification */
+.notification-icon {
+  font-size: 1.2rem; /* Taille de l'icône */
+  margin-right: 1rem; /* Espacement à droite */
+}
+
+.notification-icon.success {
+  color: #28a745; /* Vert pour les succès */
+}
+
+.notification-icon.warning {
+  color: #ffc107; /* Jaune pour les avertissements */
+}
+
+.notification-icon.error {
+  color: #dc3545; /* Rouge pour les erreurs */
+}
+
+/* Badge pour les nouveaux éléments */
+.item-badge {
+  background-color: #ff5100; /* Couleur orange vif */
+  color: #ffffff; /* Texte blanc */
+  font-size: 0.7rem; /* Taille du texte */
+  font-weight: bold; /* Texte en gras */
+  padding: 0.2rem 0.5rem; /* Espacement interne */
+  border-radius: 12px; /* Coins arrondis */
+  margin-left: 0.5rem; /* Espacement à gauche */
+}
+
+/* Pied de page du menu déroulant */
+.dropdown-footer {
+  display: block; /* Affiche comme un bloc */
+  text-align: center; /* Centre le texte */
+  padding: 0.8rem; /* Espacement interne */
+  font-size: 0.9rem; /* Taille de la police */
+  color: #333; /* Couleur orange vif */
+  text-decoration: none; /* Supprime le soulignement */
+  border-top: 1px solid #eaeaea; /* Ligne de séparation en haut */
+  font-weight: bold; /* Texte en gras */
+}
+
+/* Effet au survol du pied de page */
+.dropdown-footer:hover {
+  background-color: #ff5100; /* Change le fond en gris clair */
+  color: #ffffff; /* Change la couleur du texte en blanc */
+}

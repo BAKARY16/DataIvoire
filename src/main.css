@@ -1,0 +1,53 @@
+body {
+    font-family: "Spartan", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #030303;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /*##########################*/
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e5e5e5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333333d3;
+    border-radius: 20rem;
+    ;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #000;
+}
