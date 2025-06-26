@@ -53,7 +53,7 @@ body {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     text-align: center;
-    color: #ff5100;
+    color: #ff7300;
     margin-top: 0.5rem;
 }
 
@@ -116,7 +116,7 @@ body {
 }
 
 .forgot-password:hover {
-    color: #ff5100;
+    color: #ff7300;
     text-decoration: none;
 }
 
@@ -200,7 +200,7 @@ body {
 }
 
 .signup-link {
-    color: #ff5100;
+    color: #ff7300;
     font-weight: bold;
     text-decoration: none;
 }

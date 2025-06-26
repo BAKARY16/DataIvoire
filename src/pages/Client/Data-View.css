@@ -25,7 +25,7 @@
 }
 
 .search-header .title-line2 {
-  color: #fe5521;
+  color: #ff5100;
   margin-bottom: 1rem;
 }
 
@@ -98,7 +98,7 @@
 
 .button-icons[data-v-8d4d8d3a] {
   padding: 10px;
-  background: #fe5521;
+  background: #ff5100;
   color: #fff;
   border-radius: 50%;
   line-height: 1.2;
@@ -135,7 +135,7 @@ input[type="text" i] {
   font-size: 1.25rem;
   cursor: pointer;
   padding: 10px;
-  background: #fe5521;
+  background: #ff5100;
   color: #fff;
   border-radius: 50%;
   line-height: 1.2;
@@ -215,59 +215,71 @@ input[type="text" i] {
 }
 
 /* SECTION FILTRES */
-.filters-section {
-  background-color: #f4f4f4;
-  gap: 2rem;
-  padding: 1rem 3rem 1rem 3rem;
-  width: 500px;
-  margin-right: 2rem;
-  border-radius: 0.5rem;
-}
 
-.filters-section h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #1a1a1a;
+.filter-title {
+  background-color: #dcdcdc;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .filter-group {
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
 }
 
-.filter-group h3 {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-bottom: 12px;
-  color: #444;
-}
-
-.filter-item {
+.filter-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: left;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
-  font-size: 0.95rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.checkbox {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #4CAF50;
-  border-radius: 4px;
-  margin-right: 10px;
-  font-size: 0.8rem;
-  color: #4CAF50;
+.filter-button:hover {
+  background-color: #f0f0f0;
 }
 
-/* CARTES */
+.arrow {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.filter-sidebar {
+  background-color: #f3f3f3;
+  margin-right: 3rem;
+  margin-top: 15px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+}
+
+/*****CARTES *********/
 .cards-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
   margin-top: 15px;
+}
+
+.AngleDown{
+display: flex;
+font-size: 1.2rem;
 }
 
 .region-card {
@@ -318,7 +330,6 @@ input[type="text" i] {
 }
 
 .card-update {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.85rem;
@@ -332,10 +343,23 @@ input[type="text" i] {
   font-weight: 700;
   font-size: 1.1rem;
   color: #333;
+  padding-top: 2rem;
+  display: flex;
+}
+
+.date-data{
+  color: red !important;
+  font-weight: 550;
+}
+
+.stats-data{
+ margin-right: 2rem;
+ display: flex;
+ gap: 0.4rem;
 }
 
 .details-btn {
-  background: #fe5521;
+  background: #ff5100;
   border: none;
   color: #fff;
   font-weight: 500;
@@ -362,6 +386,12 @@ input[type="text" i] {
 
   .filters-section {
     padding: 15px;
+  }
+
+  .filters-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 

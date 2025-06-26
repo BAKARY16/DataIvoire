@@ -1,8 +1,8 @@
 // src/components/SearchSection.tsx
 import React, { useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaAngleDown, FaFilter, FaRegHeart, FaCloudDownloadAlt } from "react-icons/fa";
 import "./Data-View.css"; // Assuming you have a CSS file for styles
-import { Section } from "lucide-react";
+import { AlignCenter, Section } from "lucide-react";
 
 // Définition des catégories de données et leurs couleurs
 const categories = [
@@ -77,27 +77,100 @@ export default function SearchSection() {
 
       <div className="filters-container">
         {/* Section Filtres */}
-        <section className="filters-section">
-          <div className="Title-filtre">
-            <h2>Filtres</h2>
+        <aside className="filter-sidebar">
+          <div className="filter-title">
+            <span className="AngleDown">
+              <FaFilter />
+            </span>
+            Filtre</div>
+          <div className="filter-group">
+            <button className="filter-button">
+              Toutes les organisations
+              <span className="arrow">
+                <span className="AngleDown">
+                  <FaAngleDown />
+                </span>
+              </span>
+            </button>
           </div>
 
           <div className="filter-group">
-            <h3>Toutes les organisations</h3>
-            <div className="filter-item">
-              <span className="checkbox checked">✓</span>
-              <span>Tous les types</span>
-            </div>
-            <div className="filter-item">
-              <span className="checkbox checked">✓</span>
-              <span>Tous les mots-clés</span>
-            </div>
-            <div className="filter-item">
-              <span className="checkbox checked">✓</span>
-              <span>Tous les formats</span>
-            </div>
+            <button className="filter-button">
+              Tous les types
+              <span className="arrow">
+                <span className="AngleDown">
+                  <FaAngleDown />
+                </span>
+              </span>
+            </button>
           </div>
-        </section>
+
+          <div className="filter-group">
+            <button className="filter-button">
+              Tous les mots-clés
+              <span className="arrow">
+                <span className="AngleDown">
+                  <FaAngleDown />
+                </span>
+              </span>
+            </button>
+          </div>
+
+          <div className="filter-group">
+            <button className="filter-button">
+              Tous les formats
+              <span className="arrow">
+                <span className="AngleDown">
+                  <FaAngleDown />
+                </span>
+              </span>
+            </button>
+          </div>
+
+          <div className="filter-group">
+            <button className="filter-button">
+              Tous les Licences
+              <span className="arrow">
+                <span className="AngleDown">
+                  <FaAngleDown />
+                </span>
+              </span>
+            </button>
+          </div>
+
+          <div className="filter-group">
+            <button className="filter-button">
+              Tous les schémas
+              <span className="arrow">
+                <span className="AngleDown">
+                  <FaAngleDown />
+                </span>
+              </span>
+            </button>
+          </div>
+
+          <div className="filter-group">
+            <button className="filter-button">
+              Tous les Couvertures
+              <span className="arrow">
+                <span className="AngleDown">
+                  <FaAngleDown />
+                </span>
+              </span>
+            </button>
+          </div>
+
+          <div className="filter-group">
+            <button className="filter-button">
+              Tous les Granularités
+              <span className="arrow">
+                <span className="AngleDown">
+                  <FaAngleDown />
+                </span>
+              </span>
+            </button>
+          </div>
+        </aside>
 
         {/* Cartes Population par région */}
         <div className="cards-container">
@@ -108,11 +181,16 @@ export default function SearchSection() {
               <div className="indicator">INDS</div>
             </div>
             <p className="card-description">
-              Conformément au décret n° 2018-1350 du 28 décembre 2018 relatif à la publication forme électronique des informations portant sur...
+              Conformément au décret n° 2018-1350 du 28 décembre 2018 relatif à la publication 
+              forme électronique des informations portant sur...
             </p>
             <div className="card-update">
-              <span>Mise à jour : 12/04/2024</span>
-              <div className="stats">95  20</div>
+              <span>Mise à jour : </span>
+              <span className="date-data">12/04/2024</span>
+              <div className="stats">
+                <div className="stats-data"><FaCloudDownloadAlt />95</div>
+                <div className="stats-data"><FaRegHeart />20</div>
+                </div>
             </div>
             <button className="details-btn">Voir les détails</button>
           </div>
@@ -127,8 +205,12 @@ export default function SearchSection() {
               Conformément au décret n° 2018-1350 du 28 décembre 2018 relatif à la publication forme électronique des informations portant sur...
             </p>
             <div className="card-update">
-              <span>Mise à jour : 12/04/2024</span>
-              <div className="stats">95  20</div>
+              <span>Mise à jour : </span>
+              <span className="date-data">12/04/2024</span>
+              <div className="stats">
+                <div className="stats-data"><FaCloudDownloadAlt />95</div>
+                <div className="stats-data"><FaRegHeart />20</div>
+                </div>
             </div>
             <button className="details-btn">Voir les détails</button>
           </div>
@@ -143,8 +225,12 @@ export default function SearchSection() {
               Conformément au décret n° 2018-1350 du 28 décembre 2018 relatif à la publication forme électronique des informations portant sur...
             </p>
             <div className="card-update">
-              <span>Mise à jour : 12/04/2024</span>
-              <div className="stats">95  20</div>
+              <span>Mise à jour : </span>
+              <span className="date-data">12/04/2024</span>
+              <div className="stats">
+                <div className="stats-data"><FaCloudDownloadAlt />95</div>
+                <div className="stats-data"><FaRegHeart />20</div>
+                </div>
             </div>
             <button className="details-btn">Voir les détails</button>
           </div>
@@ -159,8 +245,12 @@ export default function SearchSection() {
               Conformément au décret n° 2018-1350 du 28 décembre 2018 relatif à la publication forme électronique des informations portant sur...
             </p>
             <div className="card-update">
-              <span>Mise à jour : 12/04/2024</span>
-              <div className="stats">95  20</div>
+              <span>Mise à jour : </span>
+              <span className="date-data">12/04/2024</span>
+              <div className="stats">
+                <div className="stats-data"><FaCloudDownloadAlt />95</div>
+                <div className="stats-data"><FaRegHeart />20</div>
+                </div>
             </div>
             <button className="details-btn">Voir les détails</button>
           </div>
@@ -175,8 +265,12 @@ export default function SearchSection() {
               Conformément au décret n° 2018-1350 du 28 décembre 2018 relatif à la publication forme électronique des informations portant sur...
             </p>
             <div className="card-update">
-              <span>Mise à jour : 12/04/2024</span>
-              <div className="stats">95  20</div>
+              <span>Mise à jour : </span>
+              <span className="date-data">12/04/2024</span>
+              <div className="stats">
+                <div className="stats-data"><FaCloudDownloadAlt />95</div>
+                <div className="stats-data"><FaRegHeart />20</div>
+                </div>
             </div>
             <button className="details-btn">Voir les détails</button>
           </div>
@@ -191,8 +285,12 @@ export default function SearchSection() {
               Conformément au décret n° 2018-1350 du 28 décembre 2018 relatif à la publication forme électronique des informations portant sur...
             </p>
             <div className="card-update">
-              <span>Mise à jour : 12/04/2024</span>
-              <div className="stats">95  20</div>
+              <span>Mise à jour : </span>
+              <span className="date-data">12/04/2024</span>
+              <div className="stats">
+                <div className="stats-data"><FaCloudDownloadAlt />95</div>
+                <div className="stats-data"><FaRegHeart />20</div>
+                </div>
             </div>
             <button className="details-btn">Voir les détails</button>
           </div>
